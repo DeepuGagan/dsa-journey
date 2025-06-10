@@ -1,7 +1,7 @@
 # 🧠 DSA Journey
 
 Welcome to my DSA (Data Structures and Algorithms) practice repository!  
-This repo is a collection of problems I've solved while learning and improving my coding skills.
+This repo is a collection of problems I've solved while learning and improving my coding and problem solving skills.
 
 ## 📌 What You'll Find
 
