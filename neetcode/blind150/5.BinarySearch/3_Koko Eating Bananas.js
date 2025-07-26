@@ -2,6 +2,7 @@
 
 //my method
 
+// Time Complexity: O(max(piles) * n), Space Complexity: O(1)
 const KEB = (piles, h) => {
   let speed = 1
 
@@ -18,6 +19,7 @@ const KEB = (piles, h) => {
 }
 
 
+// Time Complexity: O(n * log(max(piles))), Space Complexity: O(1)
 const KEB2 = (piles, h) => {
   let l = 0
   let r = Math.max(...piles)

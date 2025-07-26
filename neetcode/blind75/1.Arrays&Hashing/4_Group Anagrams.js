@@ -5,7 +5,9 @@
   // DSA method
 
 
-  const GA = (strs) =>{
+  // Time Complexity: O(n*k*log(k)), Space Complexity: O(n*k)
+// n = number of strings, k = max string length
+const GA = (strs) =>{
     const sorted = strs.map(s=>s.split('').sort().join(''))
 
     let container = new Map()

@@ -1,6 +1,7 @@
 `https://leetcode.com/problems/search-a-2d-matrix/description/`
 
 //my method
+// Time Complexity: O(m*n), Space Complexity: O(1)
 const SA2DM = (matrix, target) => {
   for (let r = 0; r < matrix.length; r++) {
     for (let c = 0; c < matrix[r].length; c++) { // imp - matrix[r].length
@@ -10,6 +11,7 @@ const SA2DM = (matrix, target) => {
   return false
 }
 
+// Time Complexity: O(log m + log n), Space Complexity: O(1)
 const SA2DM2 = (matrix, target) => {
   let rows = matrix.length - 1
   let col = matrix[0].length - 1

@@ -2,6 +2,7 @@
 
 //my method
 
+// Time Complexity: O(n log n), Space Complexity: O(n)
 const LCS = (nums) => {
   if (nums.length === 0) return 0 // so no need to have long&streak start from 0
   let set = Array.from(new Set(nums)) // set is not real array, so made array out of it
@@ -21,6 +22,7 @@ const LCS = (nums) => {
 
 //DSA
 
+// Time Complexity: O(n), Space Complexity: O(n)
 const LCS2 = (nums) => {
   if (nums.length === 0) return 0
   let set = new Set(nums)

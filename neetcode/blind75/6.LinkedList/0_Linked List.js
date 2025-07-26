@@ -1,3 +1,4 @@
+// Node class for singly linked list. Space: O(1) per node
 class Node{
   constructor(val){
     this.val = val
@@ -5,17 +6,20 @@ class Node{
   }
 }
 
+// Linked List class. Most operations: Time O(1) for addFirst, removeFirst; O(n) for addLast, removeLast, addAt, removeAt; Space: O(n)
 class LL{
   constructor(){
     this.head = null
   }
 
+  // Time: O(1), Space: O(1)
   addFirst(val){
     const newNode = new Node(val)
     newNode.next = this.head
     this.head = newNode
   }
 
+  // Time: O(n), Space: O(1)
   addLast(val){
     const newNode = new Node(val)
     if(!this.head){
@@ -28,11 +32,13 @@ class LL{
     currentNode.next = newNode
   }
 
+  // Time: O(1), Space: O(1)
   removeFirest(){
     if(!head) return 
     this.head = this.head.next
   }
 
+  // Time: O(n), Space: O(1)
   removeLast(){
     if(!head) return
     if(!head.next){

@@ -1,6 +1,8 @@
 `https://leetcode.com/problems/subtree-of-another-tree/`
 
 
+// Approach: DFS (Depth-First Search), Recursion, Tree Comparison
+// Time Complexity: O(m*n), Space Complexity: O(h) (h = height of tree, due to recursion stack)
 const SOAT = (root, subtree) => {
 
     if (!subRoot) return true // An empty tree is a subtree of any tree

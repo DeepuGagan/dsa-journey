@@ -1,10 +1,12 @@
 `https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/description/`
 
+// Time Complexity: O(n), Space Complexity: O(1)
 const FMIRSA = (nums) => {
   return Math.min(...nums); // or use a simple for loop to track min
 } 
 
 // or simple iteration and check min
+// Time Complexity: O(n), Space Complexity: O(1)
 const FMIRSA2 = (nums) => {
   let min = nums[0]; // start with first element as min
 
@@ -17,6 +19,7 @@ const FMIRSA2 = (nums) => {
   return min;
 }
 
+// Time Complexity: O(log n), Space Complexity: O(1)
 const FMIRSA3 = (nums) => { // have this as example - [3,4,5,1,2]
   let l = 0
   let r = nums.length - 1

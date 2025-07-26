@@ -2,6 +2,7 @@
 
 
 //my method 
+// Time Complexity: O(n), Space Complexity: O(n)
 const RL = (head) => {
   let nodes = []
   let currentNode = head
@@ -26,6 +27,7 @@ const RL = (head) => {
 
 
 //DSA
+// Time Complexity: O(n), Space Complexity: O(1)
 const RL2 = (head) => { // f&s can be done with head, but F is +1 (will make 2nd L smaller, if s&f are same @head, 1st will be smaller)
   if (!head || !head.next) return head
 

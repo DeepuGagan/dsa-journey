@@ -1,6 +1,7 @@
 `https://leetcode.com/problems/merge-two-sorted-lists/`
 
 
+// Time Complexity: O(n + m), Space Complexity: O(1)
 const MTSL = (list1, list2) => {
   let dummy = { val: 0, next: null }
   let currentNode = dummy // If you dont use this, you lose your reference to the start of the list

@@ -1,6 +1,7 @@
  `https://leetcode.com/problems/longest-repeating-character-replacement/`
 
- const LRCR = (str)=>{
+ // Time Complexity: O(n), Space Complexity: O(1) (since alphabet size is fixed)
+const LRCR = (str)=>{
   let container = new Map()
   let longest = 0
   let currMaxCount = 0

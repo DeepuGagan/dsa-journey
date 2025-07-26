@@ -1,6 +1,8 @@
 `https://leetcode.com/problems/same-tree/description/`
 
 
+// Approach: DFS (Depth-First Search), Recursion
+// Time Complexity: O(n), Space Complexity: O(h) (h = height of tree, due to recursion stack)
 const ST = (p, q) => {
   if (!p && !q) {
     return true

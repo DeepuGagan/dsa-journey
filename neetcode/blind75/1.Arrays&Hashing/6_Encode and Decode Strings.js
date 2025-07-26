@@ -1,6 +1,7 @@
 `https://www.geeksforgeeks.org/problems/encode-and-decode-strings/1`
 
 // DSA 
+// Time Complexity: O(n), Space Complexity: O(n)
 const encode = (str) => {
   let encodedStr = ''
   for (let s of str) {
@@ -9,6 +10,7 @@ const encode = (str) => {
   return encodedStr
 }
 
+// Time Complexity: O(n), Space Complexity: O(n)
 const decode = (str) => {
   let arr = []
   let i = 0

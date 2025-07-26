@@ -2,6 +2,7 @@
 
 // my method
 
+// Time Complexity: O(n), Space Complexity: O(1)
 const BTTBASS = (prices) => {
   let min = prices[0]
   let maxProfit = 0

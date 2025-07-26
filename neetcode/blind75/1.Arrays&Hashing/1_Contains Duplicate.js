@@ -4,10 +4,12 @@
 
 // my method
 
+// Time Complexity: O(n), Space Complexity: O(n)
 const dup = (nums) => new Set(nums).size !== nums.length
 
 `or`
 
+// Time Complexity: O(n), Space Complexity: O(n)
 const dup2 = (nums) => {
   let seen = new Set()
 
@@ -22,6 +24,7 @@ const dup2 = (nums) => {
 //DSA method
 
 
+// Time Complexity: O(n), Space Complexity: O(n)
 const dup3 = (nums) => {
   let container = {}
 

@@ -4,6 +4,7 @@
 //my method
 
 
+// Time Complexity: O(n log n), Space Complexity: O(n)
 const TKFE = (nums, k) => {
   let container = new Map()
   for (let num of nums) {
@@ -15,6 +16,7 @@ const TKFE = (nums, k) => {
 
 // DSA method
 
+// Time Complexity: O(n), Space Complexity: O(n)
 const TKFE2 = (nums, k) => {
   let container = new Map()
   for (let num of nums) {

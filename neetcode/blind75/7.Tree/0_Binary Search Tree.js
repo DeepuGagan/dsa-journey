@@ -1,3 +1,4 @@
+// Node class for BST. Space: O(1) per node
 class Node {
   constructor(val) { //A constructor function is a special type of function in JavaScript that's used to create and initialize new objects. Unlike regular functions, which just perform a set of actions, constructor functions are designed to set up an object's initial state.
     this.val = val
@@ -6,6 +7,7 @@ class Node {
   }
 }
 
+// Binary Search Tree class. Most operations (search, insert, delete): Average Time O(log n), Worst Time O(n); Space: O(n)
 class BinarySearchTree {
   constructor() {
     this.root = null

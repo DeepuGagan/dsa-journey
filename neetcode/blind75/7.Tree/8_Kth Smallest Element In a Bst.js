@@ -1,6 +1,8 @@
 `https://leetcode.com/problems/kth-smallest-element-in-a-bst/`
 
 // my method
+// Approach: Inorder Traversal, DFS (Depth-First Search), Recursion
+// Time Complexity: O(n), Space Complexity: O(n)
 const KSEIAB = (root, k) => {
   let inOrderValues = []
   const inOrder = (root) => {
@@ -17,6 +19,8 @@ const KSEIAB = (root, k) => {
 
 // DSA
 
+// Approach: Inorder Traversal, DFS (Depth-First Search), Recursion
+// Time Complexity: O(n), Space Complexity: O(h) (h = height of tree, due to recursion stack)
 const KSEIAB2 = (root, k) => {
   let KthValue
   const inOrderUntilK = (root) => {

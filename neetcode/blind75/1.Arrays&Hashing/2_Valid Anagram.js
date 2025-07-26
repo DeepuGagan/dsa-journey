@@ -5,6 +5,7 @@
 // DSA method
 
 
+// Time Complexity: O(n), Space Complexity: O(n)
 const va = (s, t) => {
   if (s.length !== t.length) return false
   let container = {} //also can be done via -  new Map()

@@ -1,6 +1,7 @@
 `https://leetcode.com/problems/remove-nth-node-from-end-of-list/`
 
 // my method
+// Time Complexity: O(n), Space Complexity: O(1)
 const RNNFEOL = (head, n) => {
     if (!head || n <= 0) return head
     //step1- reverse
@@ -23,6 +24,7 @@ const RNNFEOL = (head, n) => {
 }
 
 
+// Time Complexity: O(n), Space Complexity: O(n)
 const RNNFEOL2 = (head, n) => {
     let nodes = []
     let currentNode = head
@@ -42,6 +44,7 @@ const RNNFEOL2 = (head, n) => {
     return head // return nodes[0]
 }
 
+// Time Complexity: O(n), Space Complexity: O(1)
 const RNNFEOL3 = (head, n) => {
     const dummy = new ListNode(0)
     dummy.next = head

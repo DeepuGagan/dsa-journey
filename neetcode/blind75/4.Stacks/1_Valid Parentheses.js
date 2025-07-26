@@ -2,6 +2,7 @@
 
 //my method
 
+// Time Complexity: O(n^2), Space Complexity: O(1)
 const VP = (str) => {
   if (str.length % 2 !== 0) return false
 
@@ -16,6 +17,7 @@ const VP = (str) => {
 
 //DSA stack
 
+// Time Complexity: O(n), Space Complexity: O(n)
 const VP2 = (str) => {
   let stack = []
 
@@ -36,6 +38,7 @@ const VP2 = (str) => {
   return stack.length === 0
 }
 
+// Time Complexity: O(n), Space Complexity: O(n)
 const VP3 = (str) => {
   let stack = []
   const c2o = {

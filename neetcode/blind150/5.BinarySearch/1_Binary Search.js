@@ -1,5 +1,6 @@
 `https://leetcode.com/problems/binary-search/description/`
 
+// Time Complexity: O(log n), Space Complexity: O(1)
 const BS = (nums, target) => {
   let l = 0
   let r = nums.length - 1
@@ -15,6 +16,7 @@ const BS = (nums, target) => {
   return -1
 }
 
+// Time Complexity: O(log n), Space Complexity: O(log n) (due to recursion stack)
 const BS_r = (l, r, nums, target) => {
   let m = Math.floor((l + r) / 2)
   if (l > r) return -1
@@ -27,6 +29,7 @@ const BS_r = (l, r, nums, target) => {
 
 }
 
+// Time Complexity: O(log n), Space Complexity: O(log n)
 const recursion = (nums, target) => {
   return BS_r(0, nums.length - 1, nums, target)
 }

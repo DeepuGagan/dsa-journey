@@ -1,3 +1,4 @@
+// Time Complexity: O(1) for push, pop, peek, isEmpty, size; Space Complexity: O(n)
 class Stack {
   constructor() {
     this.items = [];

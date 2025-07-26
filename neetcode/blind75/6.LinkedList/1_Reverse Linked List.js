@@ -26,6 +26,7 @@
 
 // my method
 
+// Time Complexity: O(n), Space Complexity: O(n)
 const RLL = (head) => {
   if (!head) return null // imp for LL probs
   let nodes = []
@@ -46,6 +47,7 @@ const RLL = (head) => {
 
 // DSA method
 
+// Time Complexity: O(n), Space Complexity: O(1)
 const RLL2 = (head) => {
   let prevNode = null
   let currentNode = head
@@ -62,6 +64,7 @@ const RLL2 = (head) => {
 
 // Rec method
 
+// Time Complexity: O(n), Space Complexity: O(n) (due to recursion stack)
 const RLL3 = head => {
   if (!head || !head.next) return null
 

@@ -2,6 +2,7 @@
 
 
 // my method
+// Time Complexity: O(n), Space Complexity: O(n)
 const LLC = (head) => {
   if (!head) return false
 
@@ -21,6 +22,7 @@ const LLC = (head) => {
 
 // DSA method
 
+// Time Complexity: O(n), Space Complexity: O(1)
 const LLC2 = (head) => { //start pointers @same poistion
   if (!head) return false
 
