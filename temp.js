@@ -204,9 +204,8 @@ export function useDebounce(value, delay) {
     }, delay);
 
     // Cleanup the timer if value changes before delay finishes
-    return () => {
-      clearTimeout(handler);
-    };
+    return () => clearTimeout(handler);
+
   }, [value, delay]);
 
   return debouncedValue;
@@ -245,6 +244,56 @@ function SearchBox() {
 export default SearchBox;
 
 
+`implementation`//<><>>>>>>>
+
+import React, { useState, useEffect } from "react";
+import { useDebounce } from "./useDebounce";
+
+export default function SearchBox() {
+  const [query, setQuery] = useState("");
+  const debouncedQuery = useDebounce(query, 500);
+
+  const [results, setResults] = useState([]);
+
+  useEffect(() => {
+    if (!debouncedQuery) {
+      setResults([]);
+      return;
+    }
+
+    async function fetchProducts() {
+      const res = await fetch(
+        `https://dummyjson.com/products/search?q=${encodeURIComponent(
+          debouncedQuery
+        )}`
+      );
+      const data = await res.json();
+      setResults(data.products || []);
+    }
+
+    fetchProducts();
+  }, [debouncedQuery]);
+
+  return (
+    <div style={{ maxWidth: 500, margin: "2rem auto" }}>
+      <input
+        type="text"
+        placeholder="Search products…"
+        value={query}
+        onChange={(e) => setQuery(e.target.value)}
+        style={{width: "100%",padding: "0.75rem",borderRadius: 6,border: "1px solid #ccc",fontSize: 16,}}
+      />
+
+      <ul style={{ listStyle: "none", marginTop: 16, padding: 0 }}>
+        {results.map((item) => (
+          <li key={item.id} style={{ marginBottom: 12 }}>
+            <strong>{item.title}</strong> — ${item.price}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
 
 
 
