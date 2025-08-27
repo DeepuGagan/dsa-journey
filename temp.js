@@ -1,3 +1,4 @@
+`Pagination-12345`////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 const ProductCard= ({image,title})=>{
   return (
     <div>
@@ -102,7 +103,7 @@ export default Pagination;
 */
 
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+`Pagination- 1 of 10`////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 import { useEffect, useState } from "react";
@@ -182,7 +183,66 @@ export default function Pagination() {
 
 
 
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+`DEBOUNCE`//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// useDebounce.js
+import { useState, useEffect } from "react";
+
+/**
+ * Custom hook to debounce any fast-changing value
+ * @param value - the value we want to debounce (e.g., search input)
+ * @param delay - debounce delay in ms
+ * @returns debouncedValue - only updates after user stops typing
+ */
+export function useDebounce(value, delay) {
+  const [debouncedValue, setDebouncedValue] = useState(value);
+
+  useEffect(() => {
+    // Set a timer that updates debouncedValue after delay
+    const handler = setTimeout(() => {
+      setDebouncedValue(value);
+    }, delay);
+
+    // Cleanup the timer if value changes before delay finishes
+    return () => {
+      clearTimeout(handler);
+    };
+  }, [value, delay]);
+
+  return debouncedValue;
+}
+
+
+
+import React, { useState, useEffect } from "react";
+import { useDebounce } from "./useDebounce";
+
+function SearchBox() {
+  const [query, setQuery] = useState("");
+  
+  // Apply debounce hook with 500ms delay
+  const debouncedQuery = useDebounce(query, 500);
+
+  useEffect(() => {
+    if (debouncedQuery) {
+      // Only call API when debouncedQuery changes
+      console.log("API call with:", debouncedQuery);
+    }
+  }, [debouncedQuery]);
+
+  return (
+    <div>
+      <input
+        type="text"
+        placeholder="Search..."
+        value={query}
+        onChange={(e) => setQuery(e.target.value)}
+      />
+    </div>
+  );
+}
+
+export default SearchBox;
 
 
 
@@ -192,6 +252,9 @@ export default function Pagination() {
 
 
 
+
+
+`Tabs`/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 import Tabs from "./Tabs";
 
 export default function App() {
